@@ -1,0 +1,31 @@
+{
+  "id" : "com.sweethoneycode.CosmicMath",
+  "runtime" : "org.freedesktop.Platform",
+  "runtime-version" : "23.08",
+  "runtime-commit" : "deea5f08d3f27f6e1a9a15e5c269abfb5d080c183b4662a8649bbe5532f18bb2",
+  "sdk" : "org.freedesktop.Sdk",
+  "sdk-commit" : "4b13836d9be63f8e00e1da19fa7b28b23f1bc0e26648fd6d8d66af347643a2da",
+  "command" : "cosmic-math",
+  "modules" : [
+    {
+      "name" : "cosmic-math",
+      "buildsystem" : "simple",
+      "sources" : [
+        {
+          "path" : "cosmic-math",
+          "type" : "dir"
+        }
+      ],
+      "build-commands" : [
+        "install -D cosmic-math.pck /app/bin/cosmic-math.pck",
+        "install -D cosmic-math.x86_64 /app/bin/cosmic-math"
+      ]
+    }
+  ],
+  "finish-args" : [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--device=dri"
+  ]
+}

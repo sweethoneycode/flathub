@@ -1,0 +1,10 @@
+[Application]
+name=com.sweethoneycode.CosmicMath
+runtime=org.freedesktop.Platform/x86_64/23.08
+sdk=org.freedesktop.Sdk/x86_64/23.08
+command=cosmic-math.x86_64
+
+[Context]
+shared=ipc;
+sockets=x11;pulseaudio;
+devices=dri;
